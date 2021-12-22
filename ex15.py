@@ -1,5 +1,5 @@
 from sys import argv
-#uses the argv function in the sys module to get command line arguments to the script
+#uses the argv feature in the sys package to get command line arguments to the script
 script, filename = argv
 #opens the file and returns a file handler
 txt = open(filename)
