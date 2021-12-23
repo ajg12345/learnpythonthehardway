@@ -1,0 +1,1 @@
+#pop can have a negative value in order to pop the last element of the list
