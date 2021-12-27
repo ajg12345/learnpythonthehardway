@@ -1,9 +1,6 @@
-<html>
-    <head>
-        <title>Contact page</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    </head>
-    <body>For more details on <em style="color: green; font-size: 2em;">GOTHONS</em> go to this address:
+{% extends "layout.html" %}
+{% block content %}
+    For more details on <em style="color: green; font-size: 2em;">GOTHONS</em> go to this address:
         <p>123 Fake St.</p>
-    </body>
-</html>
+    
+{% endblock %}

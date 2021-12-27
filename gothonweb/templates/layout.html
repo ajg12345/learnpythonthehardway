@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/css-doodle@0.23.1/css-doodle.min.js"></script>
+        <title>Gothons Of Planet Percal #25</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+        <css-doodle>
+            :doodle {
+                position: fixed;
+                z-index: -1;
+                @grid: 18 / 100vmax;
+                background: #0a0c27;
+                }
+                --hue: calc(180 + 1.5 * @row * @col);
+                background: hsl(var(--hue), 50%, 70%);
+                margin: -.5px;
+                transition: @r(2s) ease;
+                transition-delay: @rand(500ms);
+                clip-path: polygon(@pick(
+                '0 0, 100% 0, 100% 100%',
+                '0 0, 100% 0, 0 100%',
+                '0 0, 100% 100%, 0 100%',
+                '100% 0, 100% 100%, 0 100%'
+                ));    
+        </css-doodle>        
+    <body>
+        <div class=container4>
+            
+            {% block content %}
+            {% endblock %}
+            
+        </div>
+    </body>
+    </html>
