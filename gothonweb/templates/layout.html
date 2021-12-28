@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://unpkg.com/css-doodle@0.23.1/css-doodle.min.js"></script>
         <title>Gothons Of Planet Percal #25</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     </head>
         <css-doodle>
             :doodle {
@@ -24,11 +27,15 @@
                 ));    
         </css-doodle>        
     <body>
-        <div class=container4>
-            
+        <div class="columns">
+            <div class="column"> </div>
+            <div class="mt-6 p-6 column is-three-fifths has-background-dark has-text-white-bis has-text-centered ">
             {% block content %}
             {% endblock %}
+            </div>
+            <div class="column"> </div>
             
-        </div>
+        </div>            
+        
     </body>
     </html>
